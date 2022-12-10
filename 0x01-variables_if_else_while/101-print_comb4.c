@@ -1,8 +1,14 @@
 #include <stdio.h>
-
-int main() {
-  int d1, d2, d3;
-
+/**
+ * main - Prints all possible combinations of three different digits,
+ *
+ * in ascending order, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+int d1, d2, d3;
 	for (d1 = 0; d1 < 8; d1++)
 	{
 		for (d2 = d1 + 1; d2 < 9; d2++)
@@ -12,17 +18,13 @@ int main() {
 				putchar((d1 % 10) + '0');
 				putchar((d2 % 10) + '0');
 				putchar((d3 % 10) + '0');
-
 				if (d1 == 7 && d2 == 8 && d3 == 9)
-					continue;
-				
+					continue;	
 				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
-
-	putchar('\n');
-
-	return (0);
+putchar('\n');
+return (0);
 }
